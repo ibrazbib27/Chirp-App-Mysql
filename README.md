@@ -6,7 +6,7 @@ There are 2 different Webpack configurations. One for the server and one for the
 ##Configurations
 
 #### ***Privileges***
-create user 'chirprapp'@'localhost' identified by 'password';<br />
+create user 'chirprapp'@'localhost' identified by 'whatever you want it to be';<br />
 grant all privileges on chirpr.* to 'chirprapp'@'localhost';
 
 
