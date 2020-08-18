@@ -28,7 +28,7 @@ router.post("/add", async (req, res) => {
 });
 
 //handles posting new username
-router.post("/:username/checkusers", async (req, res) => {
+router.post("/:username/createusers", async (req, res) => {
     try {
         let name = await req.params.username;
         await DB.chirp.CreateUsers(name);
@@ -80,7 +80,7 @@ router.put("/:username/updateusers", async (req, res) => {
     }
 });
 
-router.put("/:id/cleanusers", async (req, res) => {
+router.put("/:id/checkusers", async (req, res) => {
     try {
         let id = await req.params.id;
         await DB.chirp.UpdateMentions(parseInt(id));
