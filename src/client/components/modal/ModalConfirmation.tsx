@@ -41,7 +41,7 @@ const ModalConfirmation: React.FC<ModalProps> = (props) => {
                 body: JSON.stringify(formData),
             });
             if(formData.content.match(/([@]+([_]|[a-zA-Z0-9]){1,50})/gi) !== null) await props.post_user(formData.content, false);
-            await fetch(`/api/${props.match.params.id}/cleanusers`, {
+            await fetch(`/api/${props.match.params.id}/checkusers`, {
                 method: "PUT",
             });
             complete();
