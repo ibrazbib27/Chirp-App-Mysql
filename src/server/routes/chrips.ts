@@ -28,7 +28,7 @@ router.post("/add", async (req, res) => {
 });
 
 //handles posting new username
-router.post("/:username/createusers", async (req, res) => {
+router.post("/:username/checkusers", async (req, res) => {
     try {
         let name = await req.params.username;
         await DB.chirp.CreateUsers(name);
