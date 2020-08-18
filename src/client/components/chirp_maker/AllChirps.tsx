@@ -13,7 +13,6 @@ import Col from "react-bootstrap/Col";
 interface AllChirpProps extends RouteComponentProps<{ username: null | string }> {}
 
 const AllChirps: React.FC<AllChirpProps> = (props) => {
-    const [linkCount, setLinkCount] = useState<number>(0);
     const [chirpers, setChirp] = useState<Chirp[]>([]);
     const [chirpersBool, setChirpBool] = useState<boolean>(true);
 
