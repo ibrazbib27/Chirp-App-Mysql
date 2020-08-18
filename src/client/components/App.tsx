@@ -37,31 +37,33 @@ const App: React.FC<AppProps> = (props) => {
     <>
       <Router>
         <Switch>
-          <Route
-
-            exact
-            path="/:username?"
-            render={(props) => (
-              <>
-                <MyNavbar />
-                <Container className={"d-flex justify-content-center"} fluid>
-                  <Row
-                    id={"chirps"}
-                    className={
-                      "justify-content-center justify-content-lg-around mt-5 py-5 w-100"
-                    }
-                  >
-                    <AllChirps
+          {["/", "/:username?"].map((path) => (
+            <Route
+              exact
+              path={path}
+              key={path}
+              render={(props) => (
+                <>
+                  <MyNavbar />
+                  <Container className={"d-flex justify-content-center"} fluid>
+                    <Row
+                      id={"chirps"}
+                      className={
+                        "justify-content-center justify-content-lg-around mt-5 py-5 w-100"
+                      }
+                    >
+                      <AllChirps
                         history={props.history}
                         location={props.location}
                         match={props.match}
-                    />
-                  </Row>
-                </Container>
-                <Footer />
-              </>
-            )}
-          />
+                      />
+                    </Row>
+                  </Container>
+                  <Footer />
+                </>
+              )}
+            />
+          ))}
           <Route
             exact
             path="/chirp/about"
