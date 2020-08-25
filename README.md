@@ -19,7 +19,7 @@ CREATE TABLE `users` (<br />
   `_created` datetime DEFAULT CURRENT_TIMESTAMP,<br />
   PRIMARY KEY (`id`),<br />
   UNIQUE KEY `name_UNIQUE` (`name`)<br />
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=latin1<br /><br />
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1<br /><br />
 ---
 #### ***Chirps Table***
 CREATE TABLE `chirps` (<br/>
@@ -30,7 +30,7 @@ CREATE TABLE `chirps` (<br/>
   `_created` text NOT NULL,<br/>
   PRIMARY KEY (`id`),<br/>
   FULLTEXT KEY `content` (`content`)<br/>
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1<br/><br/>
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1<br/><br/>
 ---
 #### ***Mentions Table***
 CREATE TABLE `mentions` (<br/>
